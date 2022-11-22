@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv=”refresh” content=”5" />
+    <link rel="stylesheet" href="../css/calender.css">
+    <title>Kalender</title>
+
+</head>
+<body>
+    <div class="calenderbg" id="holder"  >
+    </div>
+    <script>
+        
+        function canOpen(index){
+            return (index%2==0)
+        }
+       let holder = document.getElementById("holder")
+       let memes = "https://i.redd.it/0tzys1shnwz91.jpg"
+       for(let i = 0; i < 24;i++){
+           let hatch = document.createElement("a")
+           hatch.className = "hatch"
+           let day = document.createElement("h1")
+           day.innerHTML = i+1
+           hatch.appendChild(day)
+           if(canOpen(i)){
+               hatch.href=memes
+           }
+           hatch.target = "_blank"
+           holder.appendChild(hatch)
+
+       }
+
+    </script>
+</body>
+</html>
