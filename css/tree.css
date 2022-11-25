@@ -1,0 +1,29 @@
+html{
+    background-image: url("../media/interier.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll|fixed|local|initial|inherit;
+    background-position: left top  |  x% y%  |  xpos ypos;
+    background-clip: border-box|padding-box|content-box|initial|inherit;
+    background-size: auto|length|cover|contain|initial|inherit;
+    /* background-repeat:no-repeat; */
+    display:flex;
+    justify-content:center;
+    height:100hv;
+}
+/* body{ */
+/*     background:transparent; */
+/*     display:flex; */
+/*     justify-content:center; */
+/*     height:100hv; */
+/* } */
+.tree{
+    position:absolute;
+    height:800px;
+    left:800px;
+    top:-70px;
+}
+.box{
+    position:absolute;
+    left:200px;
+    bottom:40px;
+}
