@@ -34,15 +34,17 @@ function setCookie(name,value,days) {
 function boxClick(){
     boxed = true
 }
+
 function treeClick(e){
     console.log(e)
     if(boxed) spawBall(e.clientX,e.clientY)
     boxed = false;
 }
+
 function spawBall(x,y){
     let size = 50
     clickAmount = clickAmount < 13 ? clickAmount+1:clickAmount;
-    let holder = document.getElementById('holder')
+    let holder = document.getElementById('ballholder')
     let ball = document.createElement('img')
     ball.src = '../media/ball1.png'
     ball.style = 'position:absolute;left:'+(x-size/2)+'px;top:'+(y-size/2)+'px;width:'+size+'px'
@@ -55,4 +57,9 @@ function spawBall(x,y){
         balls.push({"x":x,"y":y})
         setCookie('bulb',JSON.stringify(balls),0)
     }
+}
+function reset(){
+    setCookie('bulb',JSON.stringify([]),0)
+    let holder = document.getElementById('ballholder')
+    holder.innerHTML = ''
 }
