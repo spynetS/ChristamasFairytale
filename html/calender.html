@@ -11,13 +11,38 @@
     <div class="calenderbg" id="holder"  >
     </div>
     <script>
-        let today = new Date().getDate()
+        let today = new Date().getDate()-1
         function canOpen(index){
             console.log()
             return (index<=today)
         }
         let holder = document.getElementById("holder")
-        let memes = "https://i.redd.it/0tzys1shnwz91.jpg"
+        let memes = [
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/meme_2_lines_700-5bfe5b6be7d83__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/christmas-memes-32-5bfd5f4879de6__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/meme6-5bfd668773ce8__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/meme_2_lines_700-5bfd479523f98__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/meme_1_line_700A-5bfd589880c29__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/christmas-memes-120-5bfd363302f01__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/meme_2_lines_700-5bfd5e9cbf2f5__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/meme_2_lines_700-5bfd3b4c27ea9__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/christmas-memes-124-5bfd3b95a2918__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/meme_2_lines_700-5bfd440bde12e__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/christmas-memes-119-5bfd34ee9d9ed__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/meme_3_lines_700-5bfd48b86ad72__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/cinderella-disneyscreencaps-5bfe61dc52383__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/BnGtQ1RFGhv-png__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/christmas-memes-122-5bfd393d4be0d__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/FDSFSDF-5bfe50b0b1772__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/christmas-memes-114-5bfd17e388c66__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/christmas-memes-121-5bfd372865cf5__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/christmas-memes-118-5bfd33ea131a8__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/meme_2_lines_700-5bfd6836eba43__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/christmas-memes-112-5bfd1630383d9__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/cinderella-disneyscreencaps-5bfe63b6c1f1f__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/gdgdrt-5bfe56ffa9a2e__700.jpg",
+            "https://www.boredpanda.com/blog/wp-content/uploads/2018/11/christmas-memes-117-5bfd1fc7e7abb__700.jpg",]
+
         for(let i = 0; i < 24;i++){
             let hatch = document.createElement("a")
             hatch.className = "hatch"
@@ -30,7 +55,7 @@
             day.innerHTML = i+1
             hatch.appendChild(day)
             if(canOpen(i)){
-                hatch.href=memes
+                hatch.href=memes[i]
             }
             hatch.target = "_blank"
             holder.appendChild(hatch)
