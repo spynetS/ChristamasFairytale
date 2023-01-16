@@ -2,10 +2,10 @@ html{
     display:flex;
     justify-content:center;
     height:100hv;
-    background-color:darkgray
+    background-color:red;
 }
 body{
-    background:transparent;
+    background-color:red;
     display:flex;
     justify-content:center;
     height:100hv;
@@ -36,4 +36,5 @@ body{
     width:1500px;
     height:900px;
     position:relative;
+    border-radius: 10px;
 }

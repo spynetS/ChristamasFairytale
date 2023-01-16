@@ -6,5 +6,24 @@
 </head>
 <body>
     <h1>Hello world</h1>
+    <a href="/html/calender.html">Calender</a>
+    <a href="/html/christmastree.html">Tree</a>
+    <h1 id="1" style="position:absolute;left:" onclick="go()" >Hello</h1>
+    <script>
+        let left = 0;
+        function go(ms) {
+            let text = document.getElementById("1");
+            text.style="position:absolute;left:"+left+"px";
+            console.log(left);
+            left++;
+        }
+
+
+        //while(true){
+        //    sleep(100);
+        //    let text = document.getElementById("1");
+        //    text.style="position:absolute;left:"+left;
+        //}
+    </script>
 </body>
 </html>
